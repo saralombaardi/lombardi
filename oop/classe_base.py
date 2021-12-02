@@ -7,7 +7,6 @@ class calcComb():
         self.__N = len(stringa)
         self.__stringa = stringa
         self.__listStringa = list(stringa)
-        self.__anagrammi = anagrammi(self.__stringa)
 
     def get_stringa(self):
         return self.__stringa
@@ -15,16 +14,15 @@ class calcComb():
     def get_listStringa(self):
         return self.__listStringa
 
-    def setStringa(self):
-        '''
-        modificare questo metodo in modo da verificare la coerenza delle variabili di
-        istanza presenti
-        '''
+    def setStringa(self, str):
+        
+        self.__stringa = str
+        self.__N = len(str)
+        self.__listStringa = list(str)
         return 0
 
     def charRipetuti(self):
         
-        dict
         '''
         questo metodo deve creare un dictionary all'interno del quale la chiave deve essere
         il singolo carattere, il valore deve essere il numero di ripetizioni di quel carattere
@@ -155,3 +153,7 @@ class calcComb():
 
     def probConfUtil(self):
         pass
+
+parola = calcComb(input("inserisci la parola "))
+print(parola.get_stringa())
+print(parola.setStringa(input("str ")))
